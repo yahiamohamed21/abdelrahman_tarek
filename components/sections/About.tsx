@@ -57,11 +57,11 @@ export function About() {
                 <h3 className="text-2xl font-bold text-white mb-1">Abdelrahman Tarek</h3>
                 <p className="text-primary-400 font-medium mb-6">Backend Engineer</p>
                 
-                <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/5">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-6 border-t border-white/5">
                   {stats.map((stat, i) => (
                     <div key={i}>
-                      <div className="text-xl font-bold text-white mb-1">{stat.value}</div>
-                      <div className="text-[10px] text-slate-400 uppercase tracking-wider">{stat.label}</div>
+                      <div className="text-lg sm:text-xl font-bold text-white mb-1">{stat.value}</div>
+                      <div className="text-[9px] sm:text-[10px] text-slate-400 uppercase tracking-wider leading-tight">{stat.label}</div>
                     </div>
                   ))}
                 </div>

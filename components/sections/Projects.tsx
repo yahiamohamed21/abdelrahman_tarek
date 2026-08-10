@@ -30,17 +30,17 @@ const projects = [
       <div className="flex-1 p-6 relative overflow-hidden flex flex-col gap-4 justify-center group-hover:scale-105 transition-transform duration-700">
         <div className="absolute inset-0 bg-grid mask-image-radial-gradient opacity-30"></div>
         <div className="relative z-10 w-full max-w-sm mx-auto flex flex-col gap-3">
-          <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity }} className="flex justify-between items-center px-4 py-3 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm shadow-xl">
-            <div className="flex items-center gap-3"><Globe className="w-4 h-4 text-primary-400" /><span className="text-xs text-primary-300 font-mono">POST /api/v1/auth/login</span></div>
-            <span className="text-[10px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded border border-green-500/20">200 OK</span>
+          <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 4, repeat: Infinity }} className="flex justify-between items-center px-2 sm:px-4 py-2 sm:py-3 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm shadow-xl">
+            <div className="flex items-center gap-2 sm:gap-3"><Globe className="w-3 h-3 sm:w-4 sm:h-4 text-primary-400 shrink-0" /><span className="text-[10px] sm:text-xs text-primary-300 font-mono truncate max-w-[120px] sm:max-w-none">POST /api/v1/auth/login</span></div>
+            <span className="text-[8px] sm:text-[10px] bg-green-500/20 text-green-400 px-1.5 sm:px-2 py-0.5 rounded border border-green-500/20 shrink-0">200 OK</span>
           </motion.div>
-          <motion.div animate={{ x: [0, -5, 0] }} transition={{ duration: 5, repeat: Infinity }} className="flex justify-between items-center px-4 py-3 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm shadow-xl ml-6">
-            <div className="flex items-center gap-3"><Database className="w-4 h-4 text-secondary-400" /><span className="text-xs text-secondary-300 font-mono">GET /api/v1/products</span></div>
-            <span className="text-[10px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded border border-green-500/20">200 OK</span>
+          <motion.div animate={{ x: [0, -5, 0] }} transition={{ duration: 5, repeat: Infinity }} className="flex justify-between items-center px-2 sm:px-4 py-2 sm:py-3 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm shadow-xl sm:ml-6">
+            <div className="flex items-center gap-2 sm:gap-3"><Database className="w-3 h-3 sm:w-4 sm:h-4 text-secondary-400 shrink-0" /><span className="text-[10px] sm:text-xs text-secondary-300 font-mono truncate max-w-[120px] sm:max-w-none">GET /api/v1/products</span></div>
+            <span className="text-[8px] sm:text-[10px] bg-green-500/20 text-green-400 px-1.5 sm:px-2 py-0.5 rounded border border-green-500/20 shrink-0">200 OK</span>
           </motion.div>
-          <motion.div animate={{ x: [0, 8, 0] }} transition={{ duration: 6, repeat: Infinity }} className="flex justify-between items-center px-4 py-3 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm shadow-xl ml-12">
-            <div className="flex items-center gap-3"><Zap className="w-4 h-4 text-accent-400" /><span className="text-xs text-accent-300 font-mono">POST /api/v1/checkout</span></div>
-            <span className="text-[10px] bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded border border-yellow-500/20">202 ACCEPTED</span>
+          <motion.div animate={{ x: [0, 8, 0] }} transition={{ duration: 6, repeat: Infinity }} className="flex justify-between items-center px-2 sm:px-4 py-2 sm:py-3 bg-white/5 rounded-lg border border-white/10 backdrop-blur-sm shadow-xl sm:ml-12">
+            <div className="flex items-center gap-2 sm:gap-3"><Zap className="w-3 h-3 sm:w-4 sm:h-4 text-accent-400 shrink-0" /><span className="text-[10px] sm:text-xs text-accent-300 font-mono truncate max-w-[120px] sm:max-w-none">POST /api/v1/checkout</span></div>
+            <span className="text-[8px] sm:text-[10px] bg-yellow-500/20 text-yellow-400 px-1.5 sm:px-2 py-0.5 rounded border border-yellow-500/20 shrink-0">202 ACC</span>
           </motion.div>
         </div>
       </div>

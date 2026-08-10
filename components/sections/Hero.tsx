@@ -58,7 +58,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="flex-1 flex flex-col gap-6 sm:gap-8 text-center lg:text-left z-10 w-full max-w-[100vw] px-2 sm:px-0"
+          className="flex-1 flex flex-col gap-6 sm:gap-8 text-center lg:text-left z-10"
         >
           <div>
             <motion.div 

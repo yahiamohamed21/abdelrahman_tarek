@@ -81,17 +81,17 @@ export function ExperienceEducation() {
                 </div>
                 
                 {/* Card */}
-                <div className="w-[calc(100%-4rem)] glass p-6 rounded-2xl border border-white/5 group-hover:border-primary-500/30 transition-colors">
-                  <div className="flex items-center gap-2 text-primary-400 text-sm font-medium mb-2">
-                    <Calendar className="w-4 h-4" />
+                <div className="w-[calc(100%-3rem)] sm:w-[calc(100%-4rem)] glass p-4 sm:p-6 rounded-2xl border border-white/5 group-hover:border-primary-500/30 transition-colors">
+                  <div className="flex items-center gap-2 text-primary-400 text-xs sm:text-sm font-medium mb-2">
+                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>{item.period}</span>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-1">{item.title}</h4>
-                  <p className="text-slate-400 font-medium text-sm mb-4">{item.company}</p>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-4">{item.description}</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-1">{item.title}</h4>
+                  <p className="text-slate-400 font-medium text-xs sm:text-sm mb-4">{item.company}</p>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">{item.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {item.technologies.map(tech => (
-                      <span key={tech} className="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded text-slate-300">
+                      <span key={tech} className="text-[10px] sm:text-xs px-2 py-1 bg-white/5 border border-white/10 rounded text-slate-300">
                         {tech}
                       </span>
                     ))}
@@ -127,19 +127,19 @@ export function ExperienceEducation() {
                 </div>
                 
                 {/* Card */}
-                <div className="w-[calc(100%-4rem)] glass p-6 rounded-2xl border border-white/5 group-hover:border-secondary-500/30 transition-colors">
-                  <div className="flex items-center gap-2 text-secondary-400 text-sm font-medium mb-2">
-                    <Calendar className="w-4 h-4" />
+                <div className="w-[calc(100%-3rem)] sm:w-[calc(100%-4rem)] glass p-4 sm:p-6 rounded-2xl border border-white/5 group-hover:border-secondary-500/30 transition-colors">
+                  <div className="flex items-center gap-2 text-secondary-400 text-xs sm:text-sm font-medium mb-2">
+                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>{item.period}</span>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-1">{item.degree}</h4>
-                  <p className="text-slate-400 font-medium text-sm mb-4">{item.institution}</p>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-4">{item.description}</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-1">{item.degree}</h4>
+                  <p className="text-slate-400 font-medium text-xs sm:text-sm mb-4">{item.institution}</p>
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">{item.description}</p>
                   <ul className="space-y-1">
                     {item.achievements.map((ach, i) => (
-                      <li key={i} className="text-xs text-slate-400 flex items-center gap-2">
-                        <ChevronRight className="w-3 h-3 text-secondary-500" />
-                        {ach}
+                      <li key={i} className="text-[10px] sm:text-xs text-slate-400 flex items-center gap-2">
+                        <ChevronRight className="w-3 h-3 text-secondary-500 shrink-0" />
+                        <span className="leading-tight">{ach}</span>
                       </li>
                     ))}
                   </ul>
