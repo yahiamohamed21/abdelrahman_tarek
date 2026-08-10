@@ -7,6 +7,12 @@ export function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Prevent browser from restoring previous scroll position
+    if (typeof window !== "undefined") {
+      window.history.scrollRestoration = "manual";
+      window.scrollTo(0, 0);
+    }
+
     // Simulate loading time (e.g., waiting for assets, fonts, or just a purposeful delay for the animation)
     const timer = setTimeout(() => {
       setIsLoading(false);
