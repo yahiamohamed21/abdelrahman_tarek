@@ -58,22 +58,22 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="flex-1 flex flex-col gap-8 text-center lg:text-left z-10"
+          className="flex-1 flex flex-col gap-6 sm:gap-8 text-center lg:text-left z-10 w-full max-w-[100vw] px-2 sm:px-0"
         >
           <div>
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/5 border border-white/10 text-slate-300 text-sm font-medium mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.05)]"
+              className="inline-flex items-center gap-2 py-1.5 px-3 sm:px-4 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs sm:text-sm font-medium mb-4 sm:mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.05)] whitespace-normal text-left"
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
               </span>
               Available for new opportunities
             </motion.div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight mb-6 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading tracking-tight mb-4 sm:mb-6 leading-[1.1] break-words">
               <span className="block text-white">Backend Engineer</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 pb-2">
                 architecting scale.
@@ -81,24 +81,24 @@ export function Hero() {
             </h1>
           </div>
           
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light px-2 sm:px-0">
             I build high-performance APIs and robust backend infrastructures that power modern web applications, combining clean code principles with enterprise-level scalability.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 pt-4 w-full sm:w-auto">
-            <a href="#projects" className="flex-shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 pt-4 w-full sm:w-auto px-4 sm:px-0">
+            <a href="#projects" className="flex-shrink-0 w-full sm:w-auto">
               <Button variant="gradient" size="lg" className="w-full sm:w-auto whitespace-nowrap">
                 Explore Projects
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform shrink-0" />
               </Button>
             </a>
-            <a href="/Abdelrahman_Tarek_CV.pdf" download="Abdelrahman_Tarek_CV.pdf" className="flex-shrink-0">
+            <a href="/Abdelrahman_Tarek_CV.pdf" download="Abdelrahman_Tarek_CV.pdf" className="flex-shrink-0 w-full sm:w-auto">
               <Button variant="outline" size="lg" className="w-full sm:w-auto whitespace-nowrap">
                 <Download className="w-5 h-5 mr-2 shrink-0" />
                 Resume
               </Button>
             </a>
-            <a href="#contact" className="flex-shrink-0">
+            <a href="#contact" className="flex-shrink-0 w-full sm:w-auto">
               <Button variant="ghost" size="lg" className="w-full sm:w-auto whitespace-nowrap bg-white/5 hover:bg-white/10 border border-transparent hover:border-white/10">
                 Contact Me
               </Button>

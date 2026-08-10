@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <AnimatedBackground />
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow w-full overflow-x-hidden">
         <Hero />
         <About />
         <Skills />
