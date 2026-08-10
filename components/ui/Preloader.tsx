@@ -7,27 +7,39 @@ export function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Prevent browser from restoring previous scroll position or jumping to a hash
     if (typeof window !== "undefined") {
+      // Prevent browser from restoring previous scroll position or jumping to a hash
       window.history.scrollRestoration = "manual";
-      
+
       // If there is a hash in the URL (like #projects), remove it on refresh
       if (window.location.hash) {
         window.history.replaceState(null, "", window.location.pathname);
       }
-      
+
       window.scrollTo(0, 0);
-      
+
       // Force scroll again to ensure it overrides any native behavior
       setTimeout(() => window.scrollTo(0, 0), 10);
+
+      // Disable scrolling on the body while the preloader is active
+      document.body.style.overflow = "hidden";
     }
 
     // Simulate loading time (e.g., waiting for assets, fonts, or just a purposeful delay for the animation)
     const timer = setTimeout(() => {
       setIsLoading(false);
+      // Re-enable scrolling when done
+      if (typeof window !== "undefined") {
+        document.body.style.overflow = "";
+      }
     }, 2500);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      if (typeof window !== "undefined") {
+        document.body.style.overflow = "";
+      }
+    };
   }, []);
 
   return (
@@ -41,21 +53,21 @@ export function Preloader() {
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] overflow-hidden"
         >
           <div className="absolute inset-0 bg-grid mask-image-radial-gradient opacity-10"></div>
-          
+
           <div className="relative flex flex-col items-center justify-center gap-8">
             <div className="relative w-24 h-24 flex items-center justify-center">
               {/* Spinning rings */}
-              <motion.div 
+              <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 border-2 border-transparent border-t-primary-500 rounded-full"
               />
-              <motion.div 
+              <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-2 border-2 border-transparent border-t-secondary-500 rounded-full"
               />
-              <motion.div 
+              <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-4 border-2 border-transparent border-t-accent-500 rounded-full"
@@ -64,7 +76,7 @@ export function Preloader() {
             </div>
 
             <div className="flex flex-col items-center gap-2">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -73,7 +85,7 @@ export function Preloader() {
                 Initializing
               </motion.h1>
               <div className="w-48 h-1 bg-white/10 rounded-full overflow-hidden">
-                <motion.div 
+                <motion.div
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 2, ease: "easeInOut" }}
