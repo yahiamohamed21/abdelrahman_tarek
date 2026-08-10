@@ -27,9 +27,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} h-full antialiased dark`}
+      className={`${inter.variable} ${outfit.variable} antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#050505] text-slate-200">
+      <body className="min-h-screen flex flex-col bg-[#050505] text-slate-200">
         <Preloader />
         {children}
       </body>
