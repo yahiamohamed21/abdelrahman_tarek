@@ -7,10 +7,19 @@ export function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Prevent browser from restoring previous scroll position
+    // Prevent browser from restoring previous scroll position or jumping to a hash
     if (typeof window !== "undefined") {
       window.history.scrollRestoration = "manual";
+      
+      // If there is a hash in the URL (like #projects), remove it on refresh
+      if (window.location.hash) {
+        window.history.replaceState(null, "", window.location.pathname);
+      }
+      
       window.scrollTo(0, 0);
+      
+      // Force scroll again to ensure it overrides any native behavior
+      setTimeout(() => window.scrollTo(0, 0), 10);
     }
 
     // Simulate loading time (e.g., waiting for assets, fonts, or just a purposeful delay for the animation)
